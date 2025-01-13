@@ -1,0 +1,347 @@
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  color: #2c3e50;
+  font-weight: 600 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem !important;
+}
+
+.titleIcon {
+  color: #ff6b6b;
+  font-size: 2rem !important;
+}
+
+.subtitle {
+  color: #666;
+}
+
+.matchCard {
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.matchCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cardMediaWrapper {
+  position: relative;
+  padding-top: 133%;
+  /* 3:4 aspect ratio */
+  overflow: hidden;
+}
+
+.cardMedia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardMediaWrapper:hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardMediaWrapper:hover .cardMedia {
+  transform: scale(1.05);
+}
+
+.viewProfileBtn {
+  width: 100%;
+  background-color: white !important;
+  color: #2c3e50 !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.cardContent {
+  padding: 1.5rem !important;
+}
+
+.name {
+  font-weight: 600 !important;
+  color: #2c3e50;
+  margin-bottom: 1rem !important;
+}
+
+.infoSection {
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.infoIcon {
+  font-size: 1.2rem !important;
+  margin-right: 0.5rem;
+  color: #00bcd4;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actionButton {
+  width: 48px !important;
+  height: 48px !important;
+  transition: transform 0.2s ease !important;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+}
+
+.likeButton {
+  background-color: rgba(255, 107, 107, 0.1) !important;
+  color: #ff6b6b !important;
+}
+
+.passButton {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #666 !important;
+}
+
+.noMatches {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.noMatchesIcon {
+  font-size: 4rem !important;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+/* Dialog Styles */
+.dialog {
+  backdrop-filter: blur(5px);
+}
+
+.dialogTitle {
+  background-color: #f8f9fa;
+  padding: 1.5rem !important;
+}
+
+.dialogTitleContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  color: #666 !important;
+}
+
+.dialogContent {
+  padding: 2rem !important;
+}
+
+.profileImageSection {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.profileDetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detailSection {
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.detailIcon {
+  color: #00bcd4;
+}
+
+.dialogActions {
+  padding: 1rem 2rem !important;
+  background-color: #f8f9fa;
+}
+
+.likeButtonFull {
+  background-color: #ff6b6b !important;
+  color: white !important;
+  padding: 0.5rem 2rem !important;
+
+  &:hover {
+    background-color: #ff5252 !important;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.loader {
+  color: #ff6b6b !important;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem !important;
+  }
+
+  .dialogContent {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerSection {
+    margin-bottom: 2rem;
+  }
+
+  .matchCard {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .actionButton {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .dialogActions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dialogActions button {
+    width: 100%;
+  }
+}
+
+.filtersSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.filterLabel {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Update responsive styles */
+@media (max-width: 960px) {
+  .filtersSection {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .filtersSection {
+    padding: 1rem;
+  }
+
+  .filtersSection .MuiGrid-item {
+    margin-bottom: 1rem;
+  }
+}
+
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  min-width: 150px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+}
+
+.likeCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #ff6b6b;
+}
+
+.likeIcon {
+  font-size: 1.2rem !important;
+}
+
+@media (max-width: 600px) {
+  .tabsContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tabButton {
+    width: 100%;
+  }
+}

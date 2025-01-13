@@ -1,0 +1,19 @@
+.detailsLabel {
+  font-weight: 600;
+  color: #666;
+  min-width: 120px;
+  display: inline-block;
+}
+
+.detailsValue {
+  color: #333;
+}
+
+.detailsSection {
+  margin-bottom: 24px;
+}
+
+.detailsHeading {
+  color: #1976d2;
+  margin-bottom: 16px;
+}

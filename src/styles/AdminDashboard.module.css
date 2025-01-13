@@ -1,0 +1,54 @@
+.container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.statsContainer {
+  margin-bottom: 24px;
+}
+
+.statsCard {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.statsIcon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 64px !important;
+  opacity: 0.2;
+}
+
+.chartPaper {
+  padding: 20px;
+  height: 400px;
+}
+
+.tablePaper {
+  padding: 24px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.verifiedBadge {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.pendingBadge {
+  background-color: #ff9800;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
