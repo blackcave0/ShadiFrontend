@@ -1,20 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline } from '@mui/material';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Register from './pages/Register';
-import Login from './pages/Login';
-import Profile from './pages/Profile';
-import Matches from './pages/Matches';
-import theme from './theme';
-import './styles/global.css';
-import Footer from './components/Footer';
-import AdminDashboard from './pages/AdminDashboard';
-import AdminRegister from './pages/AdminRegister';
-import UserManagement from './pages/UserManagement';
-import AdminLogin from './pages/AdminLogin';
-import ProtectedAdminRoute from './components/ProtectedAdminRoute';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Matches from "./pages/Matches";
+import theme from "./theme";
+import "./styles/global.css";
+import Footer from "./components/Footer";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminRegister from "./pages/AdminRegister";
+import UserManagement from "./pages/UserManagement";
+import AdminLogin from "./pages/AdminLogin";
+import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
 
 function App() {
   return (
@@ -31,14 +31,17 @@ function App() {
             <Route path="/matches" element={<Matches />} />
             <Route path="/admin/register" element={<AdminRegister />} />
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/*" element={
-              <ProtectedAdminRoute>
-                <Routes>
-                  <Route path="/" element={<AdminDashboard />} />
-                  <Route path="/users" element={<UserManagement />} />
-                </Routes>
-              </ProtectedAdminRoute>
-            } />
+            <Route
+              path="/admin/*"
+              element={
+                <ProtectedAdminRoute>
+                  <Routes>
+                    <Route path="/" element={<AdminDashboard />} />
+                    <Route path="/users" element={<UserManagement />} />
+                  </Routes>
+                </ProtectedAdminRoute>
+              }
+            />
           </Routes>
         </main>
         <Footer />
@@ -47,4 +50,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

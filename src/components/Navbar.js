@@ -25,7 +25,7 @@ import styles from '../styles/Navbar.module.css';
 const Navbar = () => {
   // const pathname = useLocation().pathname;
   // console.log(pathname);
-  const { user, logout, isAdmin } = useAuth();
+  const {  logout,  } = useAuth();
   const { admin, adminLogout } = useAdmin();
   const navigate = useNavigate();
   const location = useLocation();
@@ -229,6 +229,7 @@ const Navbar = () => {
               <span className={styles.drawerLogoText}>ShadiApp</span>
             </ListItem>
             <NavLinks mobile />
+            {/* <AdminMenu /> */}
           </List>
         </Box>
       </Drawer>

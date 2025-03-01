@@ -13,14 +13,14 @@ import {
   DialogContent,
   DialogTitle,
   DialogActions,
-  Chip,
-  Avatar,
+  // Chip,
+  // Avatar,
   FormControl,
   InputLabel,
   Select,
   MenuItem,
-  Slider,
-  TextField,
+  // Slider,
+  // TextField,
 } from '@mui/material';
 import {
   Favorite as FavoriteIcon,
@@ -28,9 +28,9 @@ import {
   LocationOn,
   Work,
   School,
-  Message as MessageIcon,
-  Person,
-  Cake,
+  // Message as MessageIcon,
+  // Person,
+  // Cake,
   VolunteerActivism,
   Block,
 } from '@mui/icons-material';
@@ -53,6 +53,7 @@ const Matches = () => {
 
   useEffect(() => {
     fetchMatches();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMatches = async () => {
@@ -114,6 +115,7 @@ const Matches = () => {
 
   useEffect(() => {
     fetchMatches();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const ageOptions = Array.from({ length: 101 }, (_, i) => i.toString());
