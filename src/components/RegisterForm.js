@@ -37,6 +37,7 @@ import axios from "axios";
 import styles from "../styles/RegisterForm.module.css";
 import { toast } from "react-toastify";
 import { RELIGIONS, OCCUPATIONS } from "../utils/constants";
+import { BASE_URL } from "../utils/base";
 
 const steps = ["Basic Info", "Personal Details", "Photos", "Preferences"];
 
@@ -198,7 +199,7 @@ export default function RegisterForm(props) {
         console.log(pair[0], pair[1]);
       }
 
-      const response = await axios.post("/api/auth/register", formDataToSend, {
+      const response = await axios.post(`${BASE_URL}/api/auth/register`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

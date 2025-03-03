@@ -29,6 +29,7 @@ import { Line } from 'react-chartjs-2';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/AdminDashboard.module.css';
+import { BASE_URL } from '../utils/base';
 
 // Register ChartJS components
 ChartJS.register(
@@ -50,7 +51,7 @@ const AdminDashboard = () => {
   const fetchStats = useCallback(async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('/api/admin/stats', {
+      const response = await axios.get(`${BASE_URL}/api/admin/stats`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStats(response.data);

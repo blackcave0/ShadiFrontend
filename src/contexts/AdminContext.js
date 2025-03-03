@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../utils/base';
 
 const AdminContext = createContext(null);
 
@@ -18,7 +19,7 @@ export const AdminProvider = ({ children }) => {
 
   const fetchAdmin = async (token) => {
     try {
-      const response = await axios.get('/api/admin/auth/me', {
+      const response = await axios.get(`${BASE_URL}/api/admin/auth/me`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setAdmin(response.data);

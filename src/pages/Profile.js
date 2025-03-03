@@ -24,6 +24,7 @@ import {
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from '../styles/Profile.module.css';
+import { BASE_URL } from '../utils/base';
 
 const Profile = () => {
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,7 @@ const Profile = () => {
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('/api/profile', {
+      const response = await axios.get(`${BASE_URL}/api/profile`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfileData(response.data);
@@ -65,7 +66,7 @@ const Profile = () => {
       });
 
       const token = localStorage.getItem('token');
-      const response = await axios.post('/api/profile/photos', formData, {
+      const response = await axios.post(`${BASE_URL}/api/profile/photos`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

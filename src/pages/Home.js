@@ -146,7 +146,7 @@ const Home = () => {
                 <Card className={styles.storyCard}>
                   <CardMedia
                     component="img"
-                    height="300"
+                    height="350"
                     image={story.image}
                     alt={story.couple}
                     className={styles.storyImage}
@@ -250,19 +250,25 @@ const features = [
 const successStories = [
   {
     couple: "Priya & Rahul",
-    image: "https://images.unsplash.com/photo-1623244307563-f9ade3df13c0?w=800",
-    story: "Met through ShadiApp in 2022 and got married within 6 months. It was love at first sight!"
+    image:
+      "https://res.cloudinary.com/do1sonzbq/image/upload/v1740954309/shadiapp_HeroImages/s0psgwjmlqdoor8kzp84.jpg",
+    story:
+      "Met through truematrimonial app in 2024 and got married within 6 months. It was love at first sight!",
   },
   {
-    couple: "Sarah & Ahmed",
-    image: "https://images.unsplash.com/photo-1590225472433-66f246fb0d8a?w=800",
-    story: "Found each other despite living in different cities. Now happily married for 1 year."
+    couple: "Anoop & Namrata",
+    image:
+      "https://res.cloudinary.com/do1sonzbq/image/upload/v1740954257/shadiapp_HeroImages/bvqp0tsgm1dukjierojl.jpg",
+    story:
+      "Found each other despite living in different cities. Now happily married for 1 year.",
   },
   {
     couple: "Meera & Arun",
-    image: "https://images.unsplash.com/photo-1631133961299-4bbfb096b909?w=800",
-    story: "Connected over shared interests and values. Celebrating 2 years of marriage!"
-  }
+    image:
+      "https://res.cloudinary.com/do1sonzbq/image/upload/v1740954161/shadiapp_HeroImages/w7g12pyt87ea8bpqupbc.jpg",
+    story:
+      "Connected over shared interests and values. Celebrating 2 years of marriage!",
+  },
 ];
 
 const statistics = [

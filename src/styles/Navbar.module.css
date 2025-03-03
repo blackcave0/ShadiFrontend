@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(135deg, #81BFDA 0%, #B1F0F7 100%) !important;
+  background: linear-gradient(135deg, #b157ee 0%, #9350eb 100%) !important;
   padding: 0;
   width: 100%;
   z-index: 1000;
@@ -12,7 +12,7 @@
   align-items: center;
   padding: 0.75rem 1.5rem;
   min-height: 56px;
-  background: rgba(177, 240, 247, 0.1);
+  /* background: rgba(177, 240, 247, 0.1); */
   backdrop-filter: blur(8px);
 }
 
@@ -55,7 +55,7 @@
   font-size: 0.95rem !important;
   letter-spacing: 0.5px !important;
   border: 2px solid transparent !important;
-  background: rgba(255, 255, 255, 0.2) !important;
+  background: rgba(241, 222, 51, 0.884) !important;
 }
 
 .navButton:hover {
@@ -80,6 +80,7 @@
 
 .mobileMenu {
   color: white !important;
+  display: none !important;
 }
 
 /* Drawer Styles */

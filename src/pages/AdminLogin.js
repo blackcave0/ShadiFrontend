@@ -12,6 +12,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useAdmin } from '../contexts/AdminContext';
 import axios from 'axios';
+import { BASE_URL } from '../utils/base';
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/admin/auth/login', formData);
+      const response = await axios.post(`${BASE_URL}/api/admin/auth/login`, formData);
       
       if (response.data.token) {
         localStorage.setItem('adminToken', response.data.token);

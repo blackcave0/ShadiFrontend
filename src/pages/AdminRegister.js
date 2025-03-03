@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { BASE_URL } from '../utils/base';
 
 const AdminRegister = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const AdminRegister = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/admin/auth/register', formData);
+      const response = await axios.post(`${BASE_URL}/api/admin/auth/register`, formData);
       localStorage.setItem('adminToken', response.data.token);
       navigate('/admin');
     } catch (error) {

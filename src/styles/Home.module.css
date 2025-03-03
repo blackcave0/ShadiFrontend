@@ -25,9 +25,10 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url('https://res.cloudinary.com/do1sonzbq/image/upload/v1736801088/shadiapp_HeroImages/ehqbwquwi07swxwjhqu1.jpg');
+  /* background-image: url('https://res.cloudinary.com/do1sonzbq/image/upload/v1736801088/shadiapp_HeroImages/ehqbwquwi07swxwjhqu1.jpg'); */
+  background-image: url('https://res.cloudinary.com/do1sonzbq/image/upload/v1740953647/shadiapp_HeroImages/rrslakvfa1jvkpfro629.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: top;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
 }
@@ -251,7 +252,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-image: url('https://res.cloudinary.com/do1sonzbq/image/upload/v1736801087/shadiapp_HeroImages/wtw5wqi4dgjfqczcqn5z.jpg');
+    background-image: url('https://res.cloudinary.com/do1sonzbq/image/upload/v1740953889/shadiapp_HeroImages/nolixcqqlkbmte7lu5pe.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
   }

@@ -36,6 +36,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import ErrorBoundary from '../components/ErrorBoundary';
+import { BASE_URL } from '../utils/base';
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
@@ -49,7 +50,7 @@ const UserManagement = () => {
   const fetchUsers = useCallback(async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('/api/admin/users', {
+      const response = await axios.get(`${BASE_URL}/api/admin/users`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(response.data.users);
@@ -69,7 +70,7 @@ const UserManagement = () => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await axios.delete(`/api/admin/users/${userId}`, {
+        await axios.delete(`${BASE_URL}/api/admin/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         fetchUsers(); // Refresh the list
@@ -91,7 +92,7 @@ const UserManagement = () => {
     try {
       setError('');
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get(`/api/admin/users/${userId}`, {
+      const response = await axios.get(`${BASE_URL}/api/admin/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -115,7 +116,7 @@ const UserManagement = () => {
       setError('');
       const token = localStorage.getItem('adminToken');
       const response = await axios.put(
-        `/api/admin/users/${selectedUser._id}`,
+        `${BASE_URL}/api/admin/users/${selectedUser._id}`,
         {
           email: selectedUser.email,
           status: selectedUser.status,
@@ -144,7 +145,7 @@ const UserManagement = () => {
     try {
       const token = localStorage.getItem('adminToken');
       await axios.put(
-        `/api/admin/users/${userId}`,
+        `${BASE_URL}/api/admin/users/${userId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` }}
       );

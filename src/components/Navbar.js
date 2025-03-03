@@ -187,7 +187,7 @@ const Navbar = () => {
                 filter: 'drop-shadow(0 2px 4px rgba(129, 191, 218, 0.3))',
                 color: '#FADA7A'
               }} /> 
-              <span className={styles.logoText}>ShadiApp</span>
+              <span className={styles.logoText}>True Matrimonial</span>
             </Box>
 
             <NavLinks />
@@ -227,7 +227,7 @@ const Navbar = () => {
           <List>
             <ListItem className={styles.drawerHeader}>
               <FavoriteIcon className={styles.drawerLogo} />
-              <span className={styles.drawerLogoText}>ShadiApp</span>
+              <span className={styles.drawerLogoText}>True Matrimonial</span>
             </ListItem>
             <NavLinks mobile />
             {/* <AdminMenu /> */}

@@ -37,6 +37,7 @@ import {
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from '../styles/Matches.module.css';
+import { BASE_URL } from '../utils/base';
 
 const Matches = () => {
   const [matches, setMatches] = useState([]);
@@ -59,7 +60,7 @@ const Matches = () => {
   const fetchMatches = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('/api/matches/potential', {
+      const response = await axios.get(`${BASE_URL}/api/matches/potential`, {
         headers: { Authorization: `Bearer ${token}` },
         params: filters
       });
@@ -75,7 +76,7 @@ const Matches = () => {
   const handleLike = async (userId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post(`/api/matches/like/${userId}`, {}, {
+      const response = await axios.post(`${BASE_URL}/api/matches/like/${userId}`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -194,7 +195,7 @@ const Matches = () => {
   const fetchLikedProfiles = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('/api/matches/liked', {
+      const response = await axios.get(`${BASE_URL}/api/matches/liked`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLikedProfiles(response.data.likedProfiles);
