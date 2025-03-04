@@ -40,7 +40,10 @@ export const AuthProvider = ({ children }) => {
       setIsAdmin(response.data.user.isAdmin);
       return response.data;
     } catch (error) {
-      throw error;
+      if (error.response && error.response.status === 401) {
+        throw new Error('Invalid email or password');
+      }
+      throw new Error('An error occurred during login. Please try again.');
     }
   };
 

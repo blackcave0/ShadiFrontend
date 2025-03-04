@@ -10,14 +10,17 @@ const Login = () => {
     email: '',
     password: '',
   });
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setError('');
       await login(formData.email, formData.password);
       navigate('/profile');
     } catch (error) {
       console.error('Login failed:', error);
+      setError('Invalid email or password. Please try again.');
     }
   };
 
@@ -40,6 +43,11 @@ const Login = () => {
           </Typography>
 
           <form onSubmit={handleSubmit}>
+            {error && (
+              <Typography color="error" align="center" sx={{ mb: 2 }}>
+                {error}
+              </Typography>
+            )}
             <TextField
               margin="normal"
               required
@@ -82,5 +90,4 @@ const Login = () => {
     </Container>
   );
 };
-
 export default Login; 
